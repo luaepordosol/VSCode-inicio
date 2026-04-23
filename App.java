@@ -3,11 +3,10 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner teclado = new Scanner (System.in);
-        PrintStream video = new PrintStream(System.out);
 
         double b1, b2, b3, b4, nf;
         String seraquedeuboa; 
-        video.println("Informe as 4 notas bimestrais 1b 2b 3b 4b :");
+        System.out.println("Informe as 4 notas bimestrais 1b 2b 3b 4b :");
         b1 = teclado.nextDouble();
         b2 = teclado.nextDouble();
         b3 = teclado.nextDouble();
@@ -20,16 +19,16 @@ public class App {
             seraquedeuboa = "Aprovado";
 
         } 
-        else{
-
-        }
-        if (nf >=4 & nf < 5.9){
+        else if (nf >=4 & nf < 5.9){
             seraquedeuboa = "Recuperação!";
+        } 
+        else{
+            seraquedeuboa = "Reprovado!";
         }
 
 
-        video.println("Sua média final foi de: " + nf );
-        video.println(seraquedeuboa);
+        System.out.println("Sua média final foi de: " + nf );
+        System.out.println(seraquedeuboa);
 
     }
 }
