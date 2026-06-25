@@ -9,6 +9,7 @@ public class Tads {
         turma = new Aluno[30];//turma com 30 alunos
 
         setTurma(4);
+        getTurma();
 
     }
 
@@ -21,7 +22,14 @@ public class Tads {
         turma[i].conceito = teclado.next().charAt(0);
         }
     }
+
     public static void getTurma(){
-        
+    int n;
+        for(n=1; n < turma.length && turma[n]!=null; n++){
+            System.out.print("Nome do aluno nº" + n + ": ");
+            System.out.print( turma[n].nome);
+            System.out.println("\nConceito: " + (turma[n].conceito));
+            
+        }
     }
 }
